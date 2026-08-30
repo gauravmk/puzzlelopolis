@@ -1,9 +1,76 @@
+<!doctype html>
 <html>
-<body>
-<div style="display: flex; align-items: center; flex-direction: column; gap: 48px;">
-<h1 style="margin-top: 24px">Welcome to Puzzlelopolis</h1>
-<marquee>I am actively working on issue #2. Keep an eye out!</marquee>
-<img src="/under-construction.gif" />
-</div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cutive&display=swap" rel="stylesheet">
+    <style>
+      body {
+        background-image: url("/images/paper.jpg");
+        background-size: 1500px;
+      }
+      .typewriter {
+        font-family: courier, serif;
+      }
+      .business-logo {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 999px
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mx-auto pt-12 px-8">
+      <h1 class="text-4xl md:text-6xl typewriter">
+        Welcome to Puzzlelopolis
+      </h1>
+      <div class="mt-8">
+        Puzzlelopolis is a monthly puzzle zine available for free at your nearest coffee shop / third place in Ann Arbor, Michigan. Puzzlelopolis is also a place where the bus always arrives on time and your holds are always available for pickup at the library. 
+      </div>
+      <div class="mt-4">
+        If you would like to be notified when new issues of Puzzlelopolis are available, you can sign up for our newsletter below. Or you can directly go to any of our drop-off locations listed below to see if you can snag a copy.
+      </div>
+      <div class="mt-8" style="height: 48px">
+        <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="de7ac145-f3a8-482a-84d7-bd0c91517eeb"></script>
+      </div>
+      <div class="mt-12">
+        <h2 class="text-2xl md:text-3xl typewriter">Locations for the Latest Issue</h2>
+        <div class="mt-4">Printing is happening this weekend and I will drop off copies at select locations in the next few days. Hang tight!</div>
+        <!--
+        <div class="mt-4">
+          <p><span class="text-lg font-bold">Sweetwaters on Washington/Ashley</span> - <span class="italic">Last dropped off Sept 1st</span></p> 
+          <p><span class="text-lg font-bold">Argus on Liberty</span> - <span class="italic">Last dropped off Sept 1st</span></p> 
+          <p><span class="text-lg font-bold">RoosRoast on Liberty</span> - <span class="italic">Last dropped off Sept 1st</span></p> 
+          <p><span class="text-lg font-bold">Pierpont Commons</span> - <span class="italic">Last dropped off Sept 1st</span></p> 
+          <p><span class="text-lg font-bold">Math Commons @ East Hall</span> - <span class="italic">Last dropped off Sept 1st</span></p> 
+        </div>
+        -->
+        <h2 class="text-2xl md:text-3xl typewriter mt-16">Print Back Issues</h2>
+        <div class="mb-4">
+          <div>The archive of past Puzzlelopolis issues are available for you to print on your own. The Ann Arbor Library offers 30 pages of free printing per day, so that's always a good option.</div>
+          <div>Use the following settings when printing:</div>
+          <ul class="list-disc list-inside">
+            <li>Letter sized</li>
+            <li>Black & white</li>
+            <li>Double sided</li>
+            <li>Flip on the short edge</li>
+            <li>Don't scale to fit, use default size (the file already contains 1/4" margins on all sides)</li>
+          </ul>
+        </div>
+        <div class="text-blue-600 underline">
+          <a class="block" href="/archives/1.pdf">Issue #1 - Aug 2026</a>
+        </div>
+        
+        <h2 class="text-2xl md:text-3xl typewriter mt-16">Answer Keys for Past Issues</h2>
+        <div class="mt-4 text-blue-600 underline">
+          <a class="block" href="/answers/1.pdf">Issue #1 - Aug 2026</a>
+          <a class="block" href="/answers/2.pdf">Issue #2 - Sep 2026</a>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
+
