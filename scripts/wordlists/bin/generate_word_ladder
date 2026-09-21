@@ -1,0 +1,4 @@
+start=$1
+end=$2
+echo "Generating word list from $1 to $2"
+python3 scripts/generate_word_ladder.py $1 $2

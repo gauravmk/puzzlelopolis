@@ -51161,7 +51161,6 @@ claypipe;40
 claypipes;40
 claypot;50
 clayreader;20
-clays;50
 claytablet;50
 claytarget;40
 claytile;40
