@@ -21,6 +21,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
                 checkPassword();
             } else if (code === 'Backspace') {
+                if (currentIndex === 7 && evt.target.value.length > 0) {
+                    return
+                }
                 const nextField = document.querySelector(`[data-index="${currentIndex - 1}"]`)
                 if (nextField) {
                     setTimeout(() => {
@@ -44,9 +47,9 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
 
-        document.querySelector(".unlock-text").classList.replace("hidden", "fade-in")
+        document.querySelector(".unlock-text").classList.add("unhide")
         setTimeout(() => {
-            document.querySelector(".details").classList.replace("hidden", "fade-in")
+            document.querySelector(".details").classList.add("unhide")
         }, 400)
     }
 

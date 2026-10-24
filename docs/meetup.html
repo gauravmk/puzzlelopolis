@@ -21,25 +21,32 @@
           background-image: url("/images/paper.jpg");
           background-size: 1500px;
         }
+
+        .invisible {
+            opacity: 0 !important;
+        }
+
         .password-input {
           font-family: courier, serif;
         }
 
-        .fade-in {
-            opacity: 1;
-            animation-name: fadeInOpacity;
-            animation-iteration-count: 1;
-            animation-timing-function: ease-out;
-            animation-duration: .4s;
+        .unlock-text {
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
         }
 
-        @keyframes fadeInOpacity {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
+        .unlock-text.unhide {
+            opacity: 1;
+        }
+
+        .details {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .details.unhide {
+            opacity: 1;
         }
     </style>
   </head>
@@ -115,12 +122,12 @@
                     placeholder="D"
                     class="w-4 bg-transparent border-0 border-b-2 border-gray-300 px-0 py-2 text-gray-800 placeholder-gray-400 focus:border-blue-500 focus:outline-none focus:ring-0 password-input"
                 />
-                <div class="hidden unlock-text">
+                <div class="unlock-text">
                     💡 Unlocked!
                 </div>
             </div>
         </form>
-        <div class="details hidden">
+        <div class="details mb-12">
             <div class="mt-8">
                 Congratulations on solving the puzzle!
             </div> 
@@ -128,7 +135,7 @@
                 Details and RSVP can be found at this partiful link: <a href="https://partiful.com/e/Q8mLiTtCOSka4ZEWuoFo" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline hover:text-blue-800 visited:text-purple-600">https://partiful.com/e/Q8mLiTtCOSka4ZEWuoFo</a>. Please do RSVP, because I truly have no clue how many people are going to show up, and want to plan accordingly. Also if you RSVP, it's easier for me to communicate any updates or changes.
             </div>
             <div class="mt-4">
-                Also I ask that you keep the password and the partiful link secret. If you have friends struggling, lend a hand with puzzle solving, but don't reveal the answer. Every person deserves the satisfaction of the solve.
+                I ask that you keep the password and the partiful link secret. If you have friends struggling, lend a hand with puzzle solving, but don't reveal the answer. Every person deserves the satisfaction of the solve.
             </div>
         </div>
     </div>
