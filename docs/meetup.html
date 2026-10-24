@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cutive&display=swap" rel="stylesheet">
+    <title>Puzzlelopolis</title>
+    <meta name="description" content="Join us for the first Puzzlelopolis meetup on Dec 13th from 3-5pm." />
+    <meta property="og:title" content="Meetup | Puzzlelopolis" />
+    <meta property="og:url" content="https://puzzlelopolis.com" />
+    <meta property="og:image" content="https://puzzlelopolis.com/images/logo.jpg" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <script src="/scripts/meetup.js"></script>
+
+
+    <style>
+        body {
+          background-image: url("/images/paper.jpg");
+          background-size: 1500px;
+        }
+        .password-input {
+          font-family: courier, serif;
+        }
+
+        .fade-in {
+            opacity: 1;
+            animation-name: fadeInOpacity;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-out;
+            animation-duration: .4s;
+        }
+
+        @keyframes fadeInOpacity {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container mx-auto pt-12 px-8">
+        <h1 class="text-4xl mb-8">Join us for the Puzzlelopolis Meetup!</h1>
+        <div>Join us Dec 13th from 3-5pm! We'll have puzzles, activities and the opportunity to meet other puzzle nerds in our community.</div>
+        <div class="mt-8 font-bold">Enter the password from issue #4 to unlock details</div>
+        <form class="mt-4 max-w-md">
+            <div class="flex gap-x-4 items-center">
+                <label for="password" class="sr-only">Password</label>
+                <input
+                    type="text"
+                    data-index="0"
+                    data-lpignore="true"
+                    data-form-type="other"
+                    placeholder="P"
+                    class="w-4 bg-transparent border-0 border-b-2 border-gray-300 px-0 py-2 text-gray-800 placeholder-gray-400 focus:border-blue-500 focus:outline-none focus:ring-0 password-input"
+                />
+                <input
+                    type="text"
+                    data-index="1"
+                    data-lpignore="true"
+                    data-form-type="other"
+                    placeholder="A"
+                    class="w-4 bg-transparent border-0 border-b-2 border-gray-300 px-0 py-2 text-gray-800 placeholder-gray-400 focus:border-blue-500 focus:outline-none focus:ring-0 password-input"
+                />
+                <input
+                    type="text"
+                    data-index="2"
+                    data-lpignore="true"
+                    data-form-type="other"
+                    placeholder="S"
+                    class="w-4 bg-transparent border-0 border-b-2 border-gray-300 px-0 py-2 text-gray-800 placeholder-gray-400 focus:border-blue-500 focus:outline-none focus:ring-0 password-input"
+                />
+                <input
+                    type="text"
+                    data-index="3"
+                    data-lpignore="true"
+                    data-form-type="other"
+                    placeholder="S"
+                    class="w-4 bg-transparent border-0 border-b-2 border-gray-300 px-0 py-2 text-gray-800 placeholder-gray-400 focus:border-blue-500 focus:outline-none focus:ring-0 password-input"
+                />
+                <input
+                    type="text"
+                    data-index="4"
+                    data-lpignore="true"
+                    data-form-type="other"
+                    placeholder="W"
+                    class="w-4 bg-transparent border-0 border-b-2 border-gray-300 px-0 py-2 text-gray-800 placeholder-gray-400 focus:border-blue-500 focus:outline-none focus:ring-0 password-input"
+                />
+                <input
+                    type="text"
+                    data-index="5"
+                    data-lpignore="true"
+                    data-form-type="other"
+                    placeholder="O"
+                    class="w-4 bg-transparent border-0 border-b-2 border-gray-300 px-0 py-2 text-gray-800 placeholder-gray-400 focus:border-blue-500 focus:outline-none focus:ring-0 password-input"
+                />
+                <input
+                    type="text"
+                    data-index="6"
+                    data-lpignore="true"
+                    data-form-type="other"
+                    placeholder="R"
+                    class="w-4 bg-transparent border-0 border-b-2 border-gray-300 px-0 py-2 text-gray-800 placeholder-gray-400 focus:border-blue-500 focus:outline-none focus:ring-0 password-input"
+                />
+                <input
+                    type="text"
+                    data-index="7"
+                    data-lpignore="true"
+                    data-form-type="other"
+                    placeholder="D"
+                    class="w-4 bg-transparent border-0 border-b-2 border-gray-300 px-0 py-2 text-gray-800 placeholder-gray-400 focus:border-blue-500 focus:outline-none focus:ring-0 password-input"
+                />
+                <div class="hidden unlock-text">
+                    💡 Unlocked!
+                </div>
+            </div>
+        </form>
+        <div class="details hidden">
+            <div class="mt-8">
+                Congratulations on solving the puzzle!
+            </div> 
+            <div class="mt-4">
+                Details and RSVP can be found at this partiful link: <a href="https://partiful.com/e/Q8mLiTtCOSka4ZEWuoFo" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline hover:text-blue-800 visited:text-purple-600">https://partiful.com/e/Q8mLiTtCOSka4ZEWuoFo</a>. Please do RSVP, because I truly have no clue how many people are going to show up, and want to plan accordingly. Also if you RSVP, it's easier for me to communicate any updates or changes.
+            </div>
+            <div class="mt-4">
+                Also I ask that you keep the password and the partiful link secret. If you have friends struggling, lend a hand with puzzle solving, but don't reveal the answer. Every person deserves the satisfaction of the solve.
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
