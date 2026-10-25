@@ -47,6 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
 
+        gtag('event', 'unlock_meetup', {});
+
         document.querySelector(".unlock-text").classList.add("unhide")
         setTimeout(() => {
             document.querySelector(".details").classList.add("unhide")
