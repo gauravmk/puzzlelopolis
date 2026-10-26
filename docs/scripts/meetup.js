@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const currentIndex = parseInt(field.getAttribute("data-index"));
         field.addEventListener("input", (evt) => {
             const value = evt.target.value;
+            if (value.length == 0) {
+                return;
+            }
 
             evt.target.value = value[0].toUpperCase();
             evt.preventDefault();
@@ -16,10 +19,11 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             checkPassword();
         })
-        field.addEventListener("beforeinput", (evt) => {
+        field.addEventListener("beforeinput", throttle((evt) => {
             if (evt.inputType !== 'deleteContentBackward') {
                 return;
             }
+            const value = evt.target.value;
 
             if (currentIndex === 7 && value.length > 0) {
                 return;
@@ -32,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     nextField.focus();
                 }, 0)
             }
-        })
+        }, 50));
     }
 
     function checkPassword() {
@@ -54,3 +58,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelector(`[data-index="0"]`).focus()
 });
+
+function throttle(func, delay) {
+  let isThrottled = false;
+
+  return function (...args) {
+    if (!isThrottled) {
+      // Execute the main function immediately
+      func.apply(this, args); 
+      isThrottled = true;
+
+      // Block execution until the delay has passed
+      setTimeout(() => {
+        isThrottled = false;
+      }, delay);
+    }
+  };
+}
